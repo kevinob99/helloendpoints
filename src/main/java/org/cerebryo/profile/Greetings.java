@@ -9,6 +9,10 @@ import java.util.ArrayList;
 
 import javax.inject.Named;
 
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
 /**
  * Defines v1 of a helloworld API, which provides simple "greeting" methods.
  */
@@ -56,4 +60,21 @@ public class Greetings {
     HelloGreeting response = new HelloGreeting("hello " + user.getEmail());
     return response;
   }
+}
+
+public class profile extends HttpServlet {
+
+  protected void doGet( HttpServletRequest request,
+                        HttpServletResponse response)
+        throws ServletException, IOException {
+
+      doPost(request, response);
+  }
+
+  protected void doPost( HttpServletRequest request,
+                         HttpServletResponse response)
+        throws ServletException, IOException {
+
+      response.getWriter().write("GET/POST response");
+    }
 }

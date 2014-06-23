@@ -2,7 +2,7 @@
 
 	<servlet>
         <servlet-name>profile</servlet-name>
-		<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+		<servlet-class>profile</servlet-class>
 	</servlet>
     <servlet-mapping>
         <servlet-name>profile</servlet-name>
